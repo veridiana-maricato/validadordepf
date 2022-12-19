@@ -1,5 +1,10 @@
-// VALIDANDO CPF
+const checkBtn = document.querySelector('#check-btn')
+const input = document.querySelector('#cpf')
+
+
 function ValidatesCpf(sentCpf) {
+  sentCpf.preventDefault()
+  sentCpf = input.value
   Object.defineProperty(this, "cleanCpf", {
     enumerable: true,
     get: function () {
@@ -34,17 +39,14 @@ ValidatesCpf.prototype.createsDigit = function (partialCpf) {
   return digit > 9 ? 0 : String(digit);
 };
 
+
 ValidatesCpf.prototype.falseSequency = function(){
     const sequency = this.cleanCpf[0].repeat(this.cleanCpf.length)
     return sequency === this.cleanCpf
 }
-const cpf = new ValidatesCpf("468.223.478-10");
-console.log(cpf.validates());
 
 
-if(cpf.validates()){
-    console.log('cpf valido')
-}else{
-    console.log('cpf invalido')
-    
-}
+
+
+
+checkBtn.addEventListener('click', ValidatesCpf)
