@@ -10,10 +10,10 @@ O validador de CPF é uma aplicação full stack web construída para facilitar 
 A aplicação utiliza uma série de operações matemáticas traduzidas para funções de programação na linguagem JavaScript.
 
 ## Layout web
-![Web 1]()
+![Web 1](https://github.com/veridiana-maricato/validadordepf/blob/main/img/layout%20web.png)
 
 A aplicação é à prova de 'sequências falsas' (false sequencies), isto é, sequências de onze dígitos idênticos, que teoricamente retornam como verdadeiras (true) nas operações matemáticas realizadas dentro das funções:
-![False sequencies]()
+![False sequencies](https://github.com/veridiana-maricato/validadordepf/blob/main/img/false%20sequency.png)
 
 # Tecnologias utilizadas
 ## Back end
