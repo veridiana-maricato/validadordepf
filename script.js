@@ -9,14 +9,14 @@ let digit2;
 // VALIDATING THE CPF
 const ValidatesCpf = (e) => {
   e.preventDefault();
-  cpfToNumbers(input.value);
+  cpfToNumbers();
+  if (verifyInput() === false) return;
   checkNewCpf();
 };
 
 // REPLACING ANYTHING THAT IS NOT A NUMBER WITH EMPTY STRINGS
-const cpfToNumbers = (sentCpf) => {
-  cleanCpf = sentCpf.replace(/\D+/g, "");
-  verifyInput();
+const cpfToNumbers = () => {
+  cleanCpf = input.value.replace(/\D+/g, "");  
 };
 
 // VERIFYING INPUT VALUE
@@ -26,8 +26,9 @@ const verifyInput = () => {
     cleanCpf.length !== 11 ||
     falseSequency()
   ) {
-    result.innerText = "Insira um CPF válido";
-    return false;
+    console.log('"Insira um CPF válido"')
+    result.innerText = "Insira um CPF válido";   
+    return false 
   }
 };
 // VERIFYING FALSE SEQUENCY
